@@ -1,6 +1,6 @@
-﻿/// created by : 
-/// date       : 
-/// description: A basic text adventure game engine
+﻿/// created by : Joy Harris 
+/// date       : November 10 2016
+/// description: An adventure game about cathching a plane
 
 using System;
 using System.Collections.Generic;
@@ -169,9 +169,9 @@ namespace LostV2
 
                 else if (scene == 16)
                 {
-                    scene = 21;
+                    scene = 15;
                 }
-                //scene 21?
+                
             }
                else if (e.KeyCode == Keys.G)  //green button press
             {
@@ -197,17 +197,20 @@ namespace LostV2
                     outputLabel.Text = "You wake one morning and your clock says it's 7:10a.m. You have to catch a plane to see your family for Christmas in ten minutes! Will you take a taxi or the subway to get to the airport?";
                     redLabel.Text = "Subway";
                     blueLabel.Text = "Taxi";
+                    greenLabel.Text = "";
                     break;
                 case 1:
                     outputLabel.Text = "Luckily you live near the subway. You grab your packed susitcase and sprint down the street. On your way you see a starbucks. Do you stop for a latte?";
                     redLabel.Text = "No";
                     blueLabel.Text = "Yes";
+                    greenLabel.Text = "";
                     pictureBox.Image = Properties.Resources.suitcase;
                     break;
                 case 2:
                     outputLabel.Text = "The taxi takes too long. You miss your plane and your family disowns you.";
                     redLabel.Text = "";
                     blueLabel.Text = "";
+                    greenLabel.Text = "";
                     loseLabel.Text = "You loose";
                     restartButton.Visible = true;
                     pictureBox.Image = Properties.Resources.taxi;
@@ -237,12 +240,14 @@ namespace LostV2
                     outputLabel.Text = "You've been here before. You change direction and find the subway.On your way you find $20. Do you use it to pay for your ticket or do you buy a gift for your family?";
                     redLabel.Text = "Buy a ticket";
                     blueLabel.Text = "Buy a present";
+                    greenLabel.Text = "";
                     pictureBox.Image = Properties.Resources.money;
                     break;
                 case 7:
                     outputLabel.Text = "A stranger leads you to a sketchy neighborhood. You end up witnessing a crime and are taken to the police staiton. You miss the plane.";
                     redLabel.Text = "";
                     blueLabel.Text = "";
+                    greenLabel.Text = "";
                     loseLabel.Text = "You loose";
                     restartButton.Visible = true;
                     pictureBox.Image = Properties.Resources.jail;
@@ -251,14 +256,16 @@ namespace LostV2
                     outputLabel.Text = "They don't have a debit machine and you can't get cash in time. You miss the plane because the subway station is stuck in the past.";
                     redLabel.Text = "";
                     blueLabel.Text = "";
+                    greenLabel.Text = "";
                     loseLabel.Text = "You loose";
                     restartButton.Visible = true;
                     pictureBox.Image = Properties.Resources.debit;
                     break;
                 case 9:
-                    outputLabel.Text = "The line for the ATM takes to long and you miss the plane.";
+                    outputLabel.Text = "The line for the ATM takes to long. You miss the plane and your family disowns you.";
                     redLabel.Text = "";
                     blueLabel.Text = "";
+                    greenLabel.Text = "";
                     loseLabel.Text = "You loose";
                     restartButton.Visible = true;
                     pictureBox.Image = Properties.Resources.line;
@@ -267,75 +274,96 @@ namespace LostV2
                     outputLabel.Text = "You buy your ticket with debit and get on the next train. You arrive at the airport, and you really need the washroom. Do you have time to go?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
+                    greenLabel.Text = "";
                     pictureBox.Image = Properties.Resources.restroom;
                     break;
                 case 11:
-                    outputLabel.Text = "You buy your family a present, but now you have no cash. The line for the ATM takes to long and you miss the plane.";
+                    outputLabel.Text = "You buy your family a present, but now you have no cash. The line for the ATM takes to long. You miss the plane and your family disowns you.";
                     redLabel.Text = "";
                     blueLabel.Text = "";
+                    greenLabel.Text = "";
                     loseLabel.Text = "You loose";
                     restartButton.Visible = true;
+                    pictureBox.Image = Properties.Resources.gift;
                     break;
                 case 12:
                     outputLabel.Text = "You find the subway and get on the next train. You arrive at the airport, and you really need the washroom. Do you have time to go?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
+                    greenLabel.Text = "";
+                    pictureBox.Image = Properties.Resources.restroom;
                     break;
                 case 13:
-                    outputLabel.Text = "By the time you come back from the washroom you've missed the plane";
+                    outputLabel.Text = "By the time you come back from the washroom you've missed the plane. You can't get home and your family disowns you.";
                     redLabel.Text = "";
                     blueLabel.Text = "";
+                    greenLabel.Text = "";
                     loseLabel.Text = "You loose";
                     restartButton.Visible = true;
+                    pictureBox.Image = Properties.Resources.sad;
                     break;
                 case 14:
                     outputLabel.Text = "You decide to wait and run to your gate. The plane is boarding. You take your seat, but you can't find your phone. Do you try to find it or stay in your seat?";
                     redLabel.Text = "Stay in your seat";
                     blueLabel.Text = "Find your phone";
+                    greenLabel.Text = "";
+                    pictureBox.Image = Properties.Resources.phone;
                     break; 
                 case 15:
                     outputLabel.Text = "The plane takes off. A flight attendant asks what kind of snacks you want. What do you pick?";
                     redLabel.Text = "Crackers";
                     blueLabel.Text = "Nothing";
                     greenLabel.Text = "Cookies";
+                    pictureBox.Image = Properties.Resources.cookies;
                     break;
                 case 16:
                     outputLabel.Text = "You get up and retrace your path looking for your phone. You can't find it anywhere and the plane is about to leave. Keep looking?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
+                    greenLabel.Text = "";
+                    pictureBox.Image = Properties.Resources.phone;
                     break;
                 case 17:
                     outputLabel.Text = "The crackers aren't nut free. You have an allergic reaction and die.";
                     redLabel.Text = "";
                     blueLabel.Text = "";
+                    greenLabel.Text = "";
                     loseLabel.Text = "You loose";
                     restartButton.Visible = true;
+                    pictureBox.Image = Properties.Resources.nuts;
                     break;
                 case 18:
                     outputLabel.Text = "The cookies make you forget about loosing your phone. You sleep the rest of the ride.";
                     redLabel.Text = "";
                     blueLabel.Text = "";
+                    greenLabel.Text = "";
                     loseLabel.Text = "You win";
                     restartButton.Visible = true;
+                    pictureBox.Image = Properties.Resources.cookies;
                     break;
                 case 19:
-                    outputLabel.Text = "You fall asleep for the rest of the ride";
+                    outputLabel.Text = "Based on past experiences, you decide not to get and food. You fall asleep for the rest of the ride";
                     redLabel.Text = "";
                     blueLabel.Text = "";
+                    greenLabel.Text = "";
                     loseLabel.Text = "You win";
                     restartButton.Visible = true;
+                    pictureBox.Image = Properties.Resources.zzz;
                     break;
                 case 20:
                     outputLabel.Text = "You miss the plane and your family disowns you.";
                     redLabel.Text = "";
                     blueLabel.Text = "";
+                    greenLabel.Text = "";
                     loseLabel.Text = "You loose";
                     restartButton.Visible = true;
+                    pictureBox.Image = Properties.Resources.restroom;
                     break;
                 case 21:
                     outputLabel.Text = "";
                     redLabel.Text = "";
                     blueLabel.Text = "";
+                    greenLabel.Text = "";
                     break;
                 default:
                     break;
@@ -344,8 +372,7 @@ namespace LostV2
 
         private void restartButton_Click(object sender, EventArgs e)
         {
-            greenLabel.Text = "";
-            scene = 0;
+            Application.Restart();
         }
 
         private void restartButton_MouseHover(object sender, EventArgs e)
