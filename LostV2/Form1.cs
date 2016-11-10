@@ -292,7 +292,7 @@ namespace LostV2
                     outputLabel.Text = "You decide to wait and run to your gate. The plane is boarding. You take your seat, but you can't find your phone. Do you try to find it or stay in your seat?";
                     redLabel.Text = "Stay in your seat";
                     blueLabel.Text = "Find your phone";
-                    break;
+                    break; 
                 case 15:
                     outputLabel.Text = "The plane takes off. A flight attendant asks what kind of snacks you want. What do you pick?";
                     redLabel.Text = "Crackers";
